@@ -1,0 +1,66 @@
+B1: Object design analysis
+        Student
+            studentId int
+            firstName String
+            lastName String
+            provinceId int
+
+        Province
+            provinceId int
+            provinceName String
+
+B2: Build project (gradle + config + tomcat)
+        ... copy from KA
+
+B3: Build DB on MySQL
+        create database spring_ajax_student_province;
+        use spring_ajax_student_province;
+        create table Student (
+                studentId int primary key auto_increment,
+                firstName varchar(20),
+        lastName varchar(30),
+        provinceId int
+          );
+        create table Province (
+                provinceId int primary key auto_increment,
+                provinceName varchar(50)
+          );
+        alter table Student add foreign key (provinceId) references Province (provinceId);
+
+B4: Build Model + connect DB MySQL (student + province)
+        @Entity
+        @Table
+        public class Object_Name {
+            @Id
+            @GenerateValue(strategy = GenerationType.?)
+            attribute id
+
+            + other attribute
+
+            @constraint
+            + with?
+
+            Getter + Setter
+
+            Constructor
+        }
+
+B5: Create package Repository (IStudentRepository + IProvinceRepository) (Use Jpa)
+        public interface name_interface extends JpaRepository<name_model, data_types_of_id> { }
+
+B6: Create package Service
+    Create IService
+    Create package provinceService + package studentService
+    Create interface IProvinceService + IStudentService
+    Create ProvinceService + StudentService implement + @Autowired repository B5 (implement interfaceService + interfaceJpaRepository)
+
+B7: do {
+        write controller
+        write views
+        while (bug > -1) {
+            set debug
+            fix bugs
+        }
+    } while (true)
+
+B8: try an other exam!
