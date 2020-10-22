@@ -54,13 +54,15 @@ B6: Create package Service
     Create interface IProvinceService + IStudentService
     Create ProvinceService + StudentService implement + @Autowired repository B5 (implement interfaceService + interfaceJpaRepository)
 
-B7: do {
+B7: First upload to git
+    do {
         write controller
         write views
         while (bug > -1) {
             set debug
             fix bugs
         }
+        commit to git
     } while (true)
 
 B8: try an other exam!
