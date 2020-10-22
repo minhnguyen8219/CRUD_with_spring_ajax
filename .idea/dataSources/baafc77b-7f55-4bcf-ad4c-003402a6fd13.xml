@@ -972,28 +972,24 @@ SELECT|sys.sys_config:null
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="304" parent="299" name="firstName">
+    <column id="304" parent="299" name="name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="305" parent="299" name="lastName">
+    <column id="305" parent="299" name="provinceId">
       <Position>3</Position>
-      <DataType>varchar(30)|0s</DataType>
-    </column>
-    <column id="306" parent="299" name="provinceId">
-      <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="307" parent="299" name="provinceId">
+    <index id="306" parent="299" name="provinceId">
       <ColNames>provinceId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="308" parent="299" name="PRIMARY">
+    <key id="307" parent="299" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>studentId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="309" parent="299" name="student_ibfk_1">
+    <foreign-key id="308" parent="299" name="student_ibfk_1">
       <ColNames>provinceId</ColNames>
       <RefTableName>province</RefTableName>
       <RefColNames>provinceId</RefColNames>

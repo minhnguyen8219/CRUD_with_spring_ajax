@@ -9,9 +9,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int nameId;
 
-    private String firstName;
-
-    private String lastName;
+    private String name;
 
     public Student() { }
 
@@ -26,20 +24,12 @@ public class Student {
         this.nameId = nameId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String firstName) {
+        this.name = name;
     }
 
     public Province getProvince() {

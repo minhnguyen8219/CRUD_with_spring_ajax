@@ -1,8 +1,7 @@
 B1: Object design analysis
         Student
             studentId int
-            firstName String
-            lastName String
+            name String
             provinceId int
 
         Province
@@ -17,8 +16,7 @@ B3: Build DB on MySQL
         use spring_ajax_student_province;
         create table Student (
                 studentId int primary key auto_increment,
-                firstName varchar(20),
-        lastName varchar(30),
+                name varchar(50)
         provinceId int
           );
         create table Province (

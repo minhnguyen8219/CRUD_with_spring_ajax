@@ -23,6 +23,10 @@ import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
+import service.province.IProvinceService;
+import service.province.ProvinceServiceImpl;
+import service.student.IStudentService;
+import service.student.StudentServiceImpl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -130,15 +134,15 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     }
 
     //(13) for what?
-//    @Bean
-//    public IStudentService studentService() {
-//        return new StudentService();
-//    }
+    @Bean
+    public IStudentService studentService() {
+        return new StudentServiceImpl();
+    }
 
     //(14) for what?
-//    @Bean
-//    public IProvinceService provinceService() {
-//        return new ProvinceService();
-//    }
+    @Bean
+    public IProvinceService provinceService() {
+        return new ProvinceServiceImpl();
+    }
 
 }
