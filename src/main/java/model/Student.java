@@ -7,22 +7,16 @@ import javax.persistence.*;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int nameId;
+    private int id;
 
     private String name;
-
-    public Student() { }
 
     @ManyToOne
     private Province province;
 
-    public int getNameId() {
-        return nameId;
-    }
+    public int getId() { return id; }
 
-    public void setNameId(int nameId) {
-        this.nameId = nameId;
-    }
+    public void setId(int id) { this.id = id; }
 
     public String getName() {
         return name;
@@ -39,4 +33,6 @@ public class Student {
     public void setProvince(Province province) {
         this.province = province;
     }
+
+    public Student() { }
 }

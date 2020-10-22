@@ -11,7 +11,7 @@ B1: Object design analysis
 B2: Build project (gradle + config + tomcat)
         ... copy from KA
 
-B3: Build DB on MySQL
+B3: Build DB on MySQL --------- DON'T USE THIS STEP ---------
         create database spring_ajax_student_province;
         use spring_ajax_student_province;
         create table Student (
